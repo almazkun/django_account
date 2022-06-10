@@ -1,3 +1,10 @@
+# This to investigate the failing test
+
+Failing test with `CustomUser` model, `email` field and `django.contrib.auth.views.login` view.
+
+On the running app, everything works as expected, but tests are failing. Truly want to understand why.
+
+
 # django_template
 This is a django started template
 

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "account",
 ]
 
 MIDDLEWARE = [
@@ -156,3 +157,11 @@ LOGGING = {
         "level": "DEBUG",
     },
 }
+
+AUTH_USER_MODEL = "account.CustomUser"
+
+# for account.urls to work
+LOGOUT_REDIRECT_URL = "home"
+
+# for account.urls to work
+LOGIN_REDIRECT_URL = "home"
