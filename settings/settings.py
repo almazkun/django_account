@@ -30,7 +30,11 @@ ALLOWED_HOSTS = [
     x.strip() for x in os.environ.get("DJANGO_ALLOWED_HOSTS", "*").split(",")
 ]
 
-CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS
+CSRF_TRUSTED_ORIGINS = (
+    [x.strip() for x in os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS", "").split(",")]
+    if os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS")
+    else []
+)
 
 # Application definition
 
