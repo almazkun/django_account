@@ -93,7 +93,7 @@ class TestViews(TestCase):
             response.context.get("form").errors
         )  # <ul class="errorlist"><li>username<ul class="errorlist"><li>This field is required.</li></ul></li></ul>
 
-git         self.assertFalse(response.context.get("user").is_authenticated)
+        self.assertFalse(response.context.get("user").is_authenticated)
         self.assertFalse(response.context.get("form").errors)
         self.assertFormError(
             response,
